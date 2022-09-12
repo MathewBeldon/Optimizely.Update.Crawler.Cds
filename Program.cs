@@ -11,14 +11,5 @@ internal class Program
         var filePath = GenerateDoc.Create(updates);
 
         Console.WriteLine($"Created file path: {filePath}");
-
-        try
-        {
-            System.Diagnostics.Process.Start(filePath);
-        }
-        catch (System.ComponentModel.Win32Exception ex)
-        {
-            Console.WriteLine("Is word installed? unable to open the word document");
-        }
     }
 }
